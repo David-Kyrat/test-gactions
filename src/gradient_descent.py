@@ -96,4 +96,5 @@ def test_gradient_descent():
     np.testing.assert_allclose(optimal_x, expected_optimal_x, atol=1e-4)
 
 def main():
+    1 = 2
     test_gradient_descent()
