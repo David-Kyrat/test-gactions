@@ -95,6 +95,7 @@ def test_gradient_descent():
     np.testing.assert_allclose(optimal_x, expected_optimal_x, atol=1e-4)
 
 
+1 = 2
 # def test_false_gets_reported_in_push_action():
 #     assert 1 == 2
 
