@@ -22,8 +22,7 @@ def gradient_descent(df, params: NDArray, alpha: float, num_iters: int) -> NDArr
     Return value
     ------------
     Optimal vector for the initial configuration and parameters"""
-    for _ in range(num_iters):
-        params -= alpha * df(params)
+    for _ in range(num_iters): params -= alpha * df(params)
     return params
 
 
@@ -60,13 +59,11 @@ def test_gradient_descent():
     """This function test the gradient descent implemented for `f(x) = x * cos(pi * (x + 1))` with 10000 iterations.
     and tests that it is close enough of `scipy.optimize.fmin`"""
 
-    def f(x):
-        return x * cos(pi * (x + 1))
+    def f(x): return x*cos(pi*(x+1))
 
-    def df(x):
-        return cos(pi * (x + 1)) - x * pi * sin(pi * (x + 1))
+    def df(x): return cos(pi*(x+1))-x*pi*sin(pi*(x+1))
 
-    x = np.linspace(-2 * pi, 2 * pi, 100)
+    x = np.linspace(-2*pi,2*pi,100)
     params = np.array([-pi, 0.0, pi])
     alpha, num_iters = 0.01, 10000
     optimal_x = gradient_descent(df, params, alpha, num_iters)
