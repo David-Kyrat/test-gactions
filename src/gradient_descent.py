@@ -90,11 +90,16 @@ def test_gradient_descent():
     )
     plt.plot(expected_optimal_x, f(expected_optimal_x), "co", label="optimal x found by scipy.optimize.fmin", alpha=0.4)
     plt.legend()
-    plt.show()
+    plt.savefig("res/gradient_descent.png")
+    # plt.show()
     # to ensure test does not fail due to dimension mismatch
     expected_optimal_x = expected_optimal_x.reshape(optimal_x.shape)
     np.testing.assert_allclose(optimal_x, expected_optimal_x, atol=1e-4)
 
+
+def test_false_gets_reported_in_push_action():
+    assert 1 == 2
+
+
 def main():
-    1 = 2
     test_gradient_descent()
