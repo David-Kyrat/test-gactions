@@ -102,6 +102,5 @@ def plot_solo(
         plt.yticks(yticks)
     plt.plot(plot_x, plot_f, fstyle, label=flabel, linewidth=1)
     plt.tight_layout(pad=2)
-    if filename:
-        plt.savefig(filename)
+    if filename: plt.savefig(filename)
     plt.show()
