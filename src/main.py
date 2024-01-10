@@ -5,4 +5,5 @@ import matplotlib.pyplot as plt  # noqa: F401
 
 if __name__ == "__main__":
     import gradient_descent as gd
+
     gd.main()

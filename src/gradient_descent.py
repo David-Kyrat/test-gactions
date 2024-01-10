@@ -27,9 +27,7 @@ def gradient_descent(df, params: NDArray, alpha: float, num_iters: int) -> NDArr
     return params
 
 
-def grad_desc_ml(
-    features: NDArray, labels: NDArray, df, w: NDArray, b: float, alpha: float, num_iters: int
-) -> tuple[NDArray, float]:
+def grad_desc_ml(features: NDArray, labels: NDArray, df, w: NDArray, b: float, alpha: float, num_iters: int) -> tuple[NDArray, float]:
     """Same gradient descent `gradient_desent` method, but that takes `features` (X) and `labels` (y)
     as additional parameters, since they're obviously going to be need for any kind of learning whatsoever.
     Parameters

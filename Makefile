@@ -54,3 +54,7 @@ clean_report:
 	cd $(REPORT_DIR) && \
 	rm  $(TEX_AUTOGEN) &> /dev/null ;\
 	cd ..
+
+clean_cache:
+	@-rm $(SRC)/*cache* $(SRC)/.*cache* -rf ;\
+	rm *cache* .*cache* -rf
