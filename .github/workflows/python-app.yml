@@ -32,7 +32,7 @@ jobs:
         with:
           # 
           os: ubuntu-latest
-          # 
+          shell: bash
           python-version: 3.12
           
       - name: Install poetry dep
